@@ -1,0 +1,21 @@
+{
+    "name": "atans/yii2-weibo-shorturl",
+    "description": "Weibo short url client",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "atans",
+            "email": "atans.chiu@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "atans\\weibo\\shorturl\\": ""
+        }
+    }
+}
