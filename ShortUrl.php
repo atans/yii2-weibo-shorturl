@@ -87,7 +87,12 @@ class ShortUrl extends Component
      */
     public function buildHttpQuery($data)
     {
-        return preg_replace('/(.+)\[\]=/', '$1', http_build_query($data));
+        // url_long[]=http://... to url_long=http://...
+        return preg_replace(
+            '/(.+)('. rawurlencode('[').')\d+('. rawurlencode(']').')/',
+            '$1',
+            http_build_query($data)
+        );
     }
 
     /**
